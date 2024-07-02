@@ -65,7 +65,7 @@ main {
     background-color: #0a6aa7;
     display: flex;
     flex-direction: column;
-    height: max-content;
+    height: min-content;
 }
 
 footer {
@@ -194,4 +194,9 @@ summary {
     margin: auto;
     width: 500px;
     border-right-color: black;
+}
+iframe{
+    width: 560px;; 
+    height:315px;
+    margin:auto;
 }
