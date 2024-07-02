@@ -65,7 +65,7 @@ main {
     background-color: #0a6aa7;
     display: flex;
     flex-direction: column;
-    height: min-content;
+    height: max-content;
 }
 
 footer {
