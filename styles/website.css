@@ -1,125 +1,150 @@
-div {
-    background-color: beige;
-    padding: 3px;
-}
-.poem {
-    text-align: center;
-}
 html {
-    background-image: url("background.jpg");
-    background-attachment: fixed;
-}
-h2 {
-    background-color: beige;
-    padding: 3px;
-    margin-top: 9px;
-    margin-bottom: 2px;
-    color: rgb(79, 114, 114);
-    text-shadow: 2px 0 aqua;
-}
-h1 {
-    background-image:linear-gradient(rgb(114, 183, 229),beige);
-    text-align: center;
-    padding: 3px;
-    font-size: 30pt;
-    color: coral;
-    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
-}
-ul {
-    background-color: beige;
-    padding: 3px;
-    list-style-position: inside;
-}
-ol {
-    background-color: beige;
-    padding: 3px;
-    list-style-position: inside;
-}
-p {
-    background-color: beige;
-    padding: 3px;
-    text-indent: 30px;
-}
-table {
     background-color: white;
-    border-color: black;
-    border-style: inset;
-    display: grid;
-    position:relative;
-    float: center;
-    margin: 30px;
-    table-layout: fixed;
-    width: 900px;
-}
-tr:nth-child(even){
-    background: #CCC
-}
-tr:first-child{
-    background-color: rgb(191, 196, 134);
-}
-table td {
-    border: 1px solid black;
-}
-table th{
-    border: 2px solid black;
-    width: 150px;
-}
-.work {
-    background-color: rgba(177, 78, 78, 0.746);
-}
-.workout {
-    background-color: rgba(164, 147, 147, 0.763);
-}
-.english {
-    background-color: rgba(85, 177, 78, 0.746);
-}
-.phys {
-    background-color: rgba(78, 170, 177, 0.746);
-}
-.ethics {
-    background-color: rgba(126, 78, 177, 0.746);
-}
-.webd {
-    background-color: rgba(174, 177, 78, 0.746);
-}
-.study {
-    background-color: rgba(23, 112, 171, 0.746);
-}
-.drive {
-    background-color: rgba(220, 180, 132, 0.739);
 }
 body {
-    font-family:Verdana, Tahoma, sans-serif;
-    font-size: 12pt;
-    margin: 30px;
+    display: grid;
+    grid-template-areas:
+        "header header"
+        "aside main"
+        "footer footer";
+    grid-template-rows: auto 1fr auto;
+    grid-template-columns: 200px 1fr;
+    gap: 10px;
+    min-height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
-a {
-    display: contents;
+
+header, main, footer, nav {
+    padding: 10px;
+    border: 1px solid #000;
 }
-a:hover {
-    display:inline;
+
+header {
+    grid-area: header;
+    background: repeating-linear-gradient(
+        0deg,
+        #0a6aa7,
+        #0a6aa7 59px,
+        white 59px,
+        white 160px);
+    display: flex;
+    align-items: center;
+    font-size: 30pt;
+    color: #ce191d;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
-img {
-    border-radius: 20px;
-    padding: 10;
-    height: 400px;
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
 }
-#myImg {
-    display: block;
+
+nav {
+    grid-area: nav;
+    background-color: #ce191d;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    font-weight: bold;
+    margin-left: 15px;
+    margin-bottom: 10px;
+    margin-top: 1px;
+    margin-right: -33px;
+    border-right-color: #db6567;
+}
+
+#h_button {
+    background-color: #db6567;
     position:relative;
-    float:right;
+}
+
+main {
+    grid-area: main;
+    background-color: #0a6aa7;
+    display: flex;
+    flex-direction: column;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #0a6aa7;
+    text-align: center;
+}
+
+section {
+    background-color: lightgray;
+    border: 1px solid #000;
+}
+
+article {
+    display:flex;
+    padding: 10px;
+    margin-bottom: 10px;
+    grid-row: 2;
+}
+
+aside {
+    padding: 10px;
+}
+
+figure {
+    background-color: lightcyan;
+    border: 1px solid #000;
+    padding: 10px;
+    margin-bottom: 10px;
+    width:fit-content;
+
+}
+
+figcaption {
+    background-color: lightsteelblue;
+    border: 1px solid #000;
+    padding: 5px;
+    text-align: center;
+    width:138px;
+}
+
+details {
+    background-color: #db6567;
+    border: 1px solid #000;
+    padding: 10px;
+}
+
+summary {
+    background-color: #db6567;
+    padding: 5px;
     cursor: pointer;
-    transition: 0.3s;
 }
-#myImg:hover {
-    height: 410px;
-    opacity: 0.7;
+
+.all {
+    display: grid;
 }
+
+.home, .biden, .trump {
+    grid-row: 1;
+    grid-column: 1;
+    padding: 10px;
+    background-color: #db6567;
+    border: none;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.home {
+    display: flex;
+}
+
+.biden, .trump{
+    display: none;
+}
+
 .modal {
     display: none; 
     position: fixed; 
     float:none;
-    z-index: 1; 
+    z-index: 4; 
     padding-top: 100px; 
     left: 0;
     top: 0;
@@ -129,12 +154,9 @@ img {
     background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.9);
 }
-.modal-content {
-    margin: auto;
-    display: block;
-    height: 650px
-}
-#caption {
+
+
+#contact{
     margin: auto;
     display: block;
     width: 80%;
@@ -145,6 +167,7 @@ img {
     height: 150px;
     background-color: #00000000;
 }
+
 .close {
     position: absolute;
     top: 15px;
@@ -159,4 +182,16 @@ img {
   color: #bbb;
   text-decoration: none;
   cursor: pointer;
+}
+
+.presidents{
+    width: 150px;
+}
+
+.vote {
+    text-align: center;
+    font-weight: bold;
+    margin: auto;
+    width: 500px;
+    border-right-color: black;
 }
