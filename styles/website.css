@@ -1,3 +1,4 @@
+
 html {
     background-color: white;
 }
@@ -188,15 +189,26 @@ summary {
     width: 150px;
 }
 
-.vote {
+#vote {
     text-align: center;
+    font-size: 30px;
     font-weight: bold;
     margin: auto;
     width: 500px;
     border-right-color: black;
+    display:block;
 }
 iframe{
     width: 560px;; 
     height:315px;
     margin:auto;
+}
+
+
+
+.animate__pulse{
+    animation-iteration-count: infinite;
+}
+i {
+    color: rgb(92, 0, 128);
 }
