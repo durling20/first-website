@@ -1,179 +1,99 @@
-<!-- EXAMPLE CODE HEADER/DISCLAIMER
- 
-Project:  Project3-Responsive website
-Name: Daniel Urling
-Submitted: 05/31/24
- 
-I declare that the following source code was written by me, or provided
-by the instructor for this project. I understand that copying source
-code from any other source, providing source code to another student, 
-or leaving my code on a public web site constitutes cheating.
-I acknowledge that  If I am found in violation of this policy this may result
-in a zero grade, a permanent record on file and possibly immediate failure of the class.
- 
-Reflection (1-2 paragraphs):  I really liked adding some style to this. The hardest part for this was by far adding 
-the javascript for the modal. This was because I have never done that before and I couldn't figure out where to put it or how to add it. 
-Overall a fun time though!
-
- 
--->
-
 <html>
     <head>
         <title>
-            About Daniel Urling
+            U.S. Presidential Candidates
         </title>
         <link rel="stylesheet" href="styles/website.css">
     </head>
-    <div>
     <body>
-        <h1>Daniel Urling</h1>
-        <img src="me.jpg" alt="me" id="myImg">
-
-        <div id="myModal" class="modal">
-            <span class="close">&times;</span>
-            <img class="modal-content" id="img01">
-            <div id="caption"></div>
-        </div>
-        <script src="modal.js"></script>
-        <h2>Personal Info</h2>
-        <ul>
-            <li><strong>Major: </strong>Computer Science</li>
-            <li><strong>High School: </strong> Idaho Falls High School 2019</li>
-            <li><strong>Current Year at UVU: </strong>Junior</li>
-            <li><strong>Favorite Ice Cream: </strong>Chocolate</li>
-        </ul>
-        <h2>Favorite Books</h2>
-        <ol>
-            <li><em>Tuesdays with Morrie</em> <a href="https://www.mitchalbom.com/">Mitch Albom</a></li>
-            <li><em>Unbroken</em> <a href="https://laurahillenbrandbooks.com/">Laura Hillenbrand</a></li>
-            <li><em>Harry Potter</em> <a href="https://www.jkrowling.com/">JK Rowling</a></li>
-            <li><em>Fablehaven</em> <a href="https://brandonmull.com/">Brandon Mull</a></li>
-            <li><em>Seabiscuit</em> <a href="https://www.mitchalbom.com/">Laura Hillenbrand</a></li>
-        </ol>
-        <h2>Poem Title</h2>
-        <p>This poem is inspired by my love for a game called Magic the Gathering. It can be a frustrating game, but I always want to play more.</p>
-        <div class="poem">
-        I play my first spell<br><br>
-        My opponent counters it<br><br>
-        I will lose this game
-        </div>
-        <h2>My personal interests</h2>
-        <p>I would like to expound on this game Magic the Gathering. This is a popular trading card game that revolves around deck building and casting spells to try and win. You can win in various ways, but the most common is to reduce your opponents life total to zero.</p>
-        <p>I also enjoy playing Mario Kart. I have grown up playing this game and I think I am very good. I am sure there are better players than me, but in groups I play with, I generally come out in first. It is a nastolgic and simply great game.</p>
-        <p>Another interest I have is politics. My family always manages to get into a good discussion about politics when we are together. I like hearing different perspectives and learning from people who see things different from me. </p>
-        <h2>Class Schedule</h2>
-        <table cellspacing="3" cellpadding="3">
-            <tr>
-                <th></th>
-                <th>Monday</th>
-                <th>Tuesday</th>
-                <th>Wednesday</th>
-                <th>Thursday</th>
-                <th>Friday</th>
-            </tr>
-            <tr>
-                <th>10:30</th>
-                <td class = "work" rowspan="8">Work</td>
-                <td class="english"rowspan="3">English 201</td>
-                <td class = "work" rowspan="8">Work</td>
-                <td class="english"rowspan="3">English 201</td>
-                <td class = "work" rowspan="8">Work</td>
-            </tr>
-            <tr>
-                <th>11:00</th>
-            </tr>
-            <tr>
-                <th>11:30</th>
-            </tr>
-            <tr>
-                <th>12:00</th>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th>12:30</th>
-                <td class="phys"rowspan="2">Physics 301</td>
-                <td class="phys"rowspan="2">Physics 301</td>
-            </tr>
-            <tr>
-                <th>1:00</th>
-            </tr>
-            <tr>
-                <th>1:30</th>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th>2:00</th>
-                <td class ="study"rowspan="3">Library Study Time!</td>
-                <td class ="study"rowspan="3">Library Study Time!</td>
-            </tr>
-            <tr>
-                <th>2:30</th>
-                <td class="drive"rowspan="2">Drive Time</td>
-                <td class="drive"rowspan="2">Drive Time</td>
-                <td class="drive"rowspan="2">Drive Time</td>
-            </tr>
-            <tr>
-                <th>3:00</th>
-            </tr>
-            <tr>
-                <th>3:30</th>
-                <td class="webd"rowspan="2">Web Development - CS 2550</td>
-                <td></td>
-                <td class="webd"rowspan="2">Web Development - CS 2550</td>
-                <td></td>
-                <td class="webd"rowspan="2">Web Development - CS 2550</td>
-            </tr>
-            <tr>
-                <th>4:00</th>
-                <td class ="ethics"rowspan="3">Global Intercultural Ethics in CS - CS 305 G</td>
-                <td class ="ethics"rowspan="3">Global Intercultural Ethics in CS - CS 305 G</td>
-            </tr>
-            <tr>
-                <th>4:30</th>
-                <td class ="study"rowspan="4">Library Study Time!</td>
-                <td class ="study"rowspan="4">Library Study Time!</td>
-                <td class ="study"rowspan="4">Library Study Time!</td>
-            </tr>
-            <tr>
-                <th>5:00</th>
-            </tr>
-            <tr>
-                <th>5:30</th>
-                <td></td>
-                <td></td>
-            </tr>
-            <tr>
-                <th>6:00</th>
-                <td class = "workout"rowspan="2">Workout</td>
-                <td class = "workout"rowspan="2">Workout</td>
-            </tr>
-            <tr>
-                <th>6:30</th>
-                <td class = "workout">Workout</td>
-                <td class = "workout">Workout</td>
-                <td class = "workout">Workout</td>
-            </tr>
-
-        </table>
-
+        <header>
+            <img src="logo.png" alt="Logo" class="logo">
+            <h1>U.S. Presidential Candidates</h1>
+        </header>
+        <aside>
+                <nav id="h_button"><a href="#" id="home">Home</a></nav>
+                <nav id="b_button"><a href="#" id="biden">Biden</a></nav>
+                <nav id="t_button"><a href="#" id="trump">Trump</a></nav>
+                <nav><a href="#" id="myImg">Contact</a></nav>
+                <div id="myModal" class="modal">
+                    <span class="close">&times;</span>
+                    <div id="contact">Email: 11012760@uvu.edu</div>
+                </div>
+                <script src="modal.js"></script>
+        </aside>
+        <main>
+            <section class="all">
+            <section class="home" id="one">
+                <h2>Home</h2>
+                <article>
+                    <figure>
+                    <img src="bidenvtrump.jpeg" alt="Candidates" class="presidents">
+                    <figcaption>Biden vs Trump</figcaption>
+                    </figure>
+                    <div>
+                        <h3>Two Choices</h3>
+                        <p>
+                            Today we have two major candidates for president: Joe Biden and Donald Trump. 
+                            These two candidates have not officially been selected for their party, 
+                            however there is a high probability that they will at their 
+                            respective party conventions this summer. Many Americans have 
+                            expressed displessure with these options, however we need to 
+                            realize these are the options that we will ultimately be choosing
+                            from. 
+                        </p>
+                    </div>
+                    </article>
+            </section>
+            <section class="biden" id="two">
+                <h2>Biden</h2>
+                <article>
+                <figure>
+                <img src="Biden.jpeg" alt="Biden Image" class="presidents">
+                <figcaption>President Biden</figcaption>
+                </figure>
+                <div>
+                    <h3>The Incumbent President</h3>
+                    <p>
+                        Coming in at 81 years old for reelection, we have our current President: Joe Biden. 
+                        He has been critisized for his old age and is currently coming in behind his opponent 
+                        in the polls. He wants to grow the middle class and create policies that benefit 
+                        working families. At the recent debate he was slow and extremely hard to follow only making 
+                        his chances worse. 
+                    </p>
+                    <h4><a href="https://joebiden.com/">Biden's Website</a></h4>
+                </div>
+                </article>
+            </section>
+            <section class="trump" id="three">
+                <h2>Trump</h2>
+                <article>
+                <figure>
+                <img src="Trump.jpeg" alt="Trump Image" class="presidents">
+                <figcaption>Former<br>President Trump</figcaption>
+                </figure>
+                <div>
+                    <h3>The Former President</h3>
+                    <p>
+                        Coming in at 78 years old for reelection, we have our former President: Donald Trump. 
+                        He has been convicted as a felon, unsuccessfully indicted twice, and has multiple misdemeanor accounts 
+                        to his name. He is critisized mainly on those accounts. His campaign promises revolve around protecting 
+                        the border, gun rights, and upholding pro-life/anti-choice policy. At the recent debate he spouted 
+                        many demonstrably false claims. However, he said them confidently and clearly making him the winner of 
+                        the debate. 
+                    </p>
+                    <h4><a href="https://www.donaldjtrump.com/mission">Trump's Website</a></h4>
+                </div>
+                </article>
+            </section>
+            </section>
+            <details>
+                <summary>What about 3rd parties?</summary>
+                <p>They can't win. Check out this <a href="https://www.washingtonpost.com/politics/2023/03/06/trump-third-party-chances/">article</a> by the Washington Post.</p>
+            </details>
+            <script src="modal.js"></script>
+        </main>
+        <footer>
+            <nav class="vote"><a href="https://vote.gov/">Click here to register to vote!</a></nav>
+        </footer>
     </body>
-</div>
 </html>
-<!-- --SELF GRADE--
---SELF GRADE--
-BODY        A 
-NAME        A 
-PORTRAIT    A 
-HEADINGS    A 
-SCHEDULE    A 
-
---EXTRA CREDIT COMPLETED--
-FLOATING DIV (5pts)    YES
-STRIPED TABLE (5pts)   YES
-MODAL PORTRAIT (10pts) YES
-ARTISTIC MERIT (10pts) YES? (I think it looks pretty darn good.)
-ADDITIONAL COMMENTS-->
-
