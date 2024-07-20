@@ -1,1 +1,91 @@
 
+html {
+    background-color: black;
+    color: white;
+}
+
+header, main, footer, nav {
+    border: 1px solid white;
+}
+
+header {
+    background: repeating-linear-gradient(
+        0deg,
+        #063a5b,
+        #063a5b 59px,
+        black 59px,
+        black 160px);
+    color: #720002;
+    text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;
+}
+
+.logo {
+    width: 100px;
+    height: 100px;
+    margin-right: 10px;
+}
+
+nav {
+    background-color: #720002;
+    border-right-color: #b40003;
+}
+
+#h_button {
+    background-color: #720002;
+    position:relative;
+}
+
+main {
+    grid-area: main;
+    background-color: #063a5b;
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+}
+
+footer {
+    grid-area: footer;
+    background-color: #063a5b;
+    text-align: center;
+}
+
+section {
+    background-color: rgb(42, 42, 42);
+    border: 1px solid white;
+}
+
+
+figure {
+    background-color: rgb(93, 114, 114);
+    border: 1px solid white;
+}
+
+figcaption {
+    background-color: rgb(55, 68, 86);
+    border: 1px solid white;
+}
+
+details {
+    background-color: #b40003;
+    border: 1px solid white;
+}
+
+summary {
+    background-color: #b40003;
+}
+
+.home, .biden, .trump {
+    background-color: #b40003;
+}
+
+
+#vote {
+    border-right-color: black;
+}
+
+i {
+    color: #58a6ff;
+}
+a {
+    color: #58a6ff;
+}
