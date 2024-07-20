@@ -1,9 +1,28 @@
+<!-- EXAMPLE CODE HEADER/DISCLAIMER
+ 
+Project:  Project4-Responsive Website
+Name: Daniel Urling
+Submitted: 07/19/24
+ 
+I declare that the following source code was written by me, or provided
+by the instructor for this project. I understand that copying source
+code from any other source, providing source code to another student, 
+or leaving my code on a public web site constitutes cheating.
+I acknowledge that  If I am found in violation of this policy this may result
+in a zero grade, a permanent record on file and possibly immediate failure of the class.
+ 
+Reflection (1-2 paragraphs):  The most difficult part was getting the javascript functions for my navigation buttons
+to change their functionality based on them becoming dark mode or not. I really enjoyed putting it together though
+and it was much easier having done the last project and making improvements rather than starting from essentially scratch
+
+ 
+-->
 <html>
     <head>
         <title>
             U.S. Presidential Candidates
         </title>
-        <link rel="stylesheet" href="styles/website.css">
+        <link rel="stylesheet" href="styles/main.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     </head>
@@ -16,12 +35,13 @@
                 <nav id="h_button"><a href="#" id="home">Home</a></nav>
                 <nav id="b_button"><a href="#" id="biden">Biden</a></nav>
                 <nav id="t_button"><a href="#" id="trump">Trump</a></nav>
+                <nav><a href="#" id='themeChange'>Apply Theme</a></nav> 
                 <nav><a href="#" id="myImg">Contact</a></nav>
                 <div id="myModal" class="modal">
                     <span class="close">&times;</span>
                     <div id="contact">Email: 11012760@uvu.edu</div>
                 </div>
-                <script src="modal.js"></script>
+                <script src="script.js"></script>
         </aside>
         <main>
             <section class="all">
@@ -96,10 +116,21 @@
                 <summary>What about 3rd parties?</summary>
                 <p>They can't win. Check out this <a href="https://www.washingtonpost.com/politics/2023/03/06/trump-third-party-chances/">article</a> by the Washington Post.</p>
             </details>
-            <script src="modal.js"></script>
+            <script src="script.js"></script>
         </main>
         <footer>
             <nav class="animate__animated animate__pulse" id="vote"><i class="fa fa-angle-double-right fa-lg"></i><a href="https://vote.gov/">Click here to register to vote!</a><i class="fa fa-angle-double-left fa-lg"></i></nav>
         </footer>
     </body>
 </html>
+<!-- 
+--SELF GRADE--
+// REFACTOR CSS-FIX       A - I wasnt given any feedback at the time 
+//                            of having to turn this in. I will implement 
+//                            and resubmit if needed once I get feedback. 
+// CSS THEME              A 
+// CSS THEME TOGGLE       A 
+
+// MOBILE RESPONSIVE      A 
+ADDITIONAL COMMENTS-->
+
