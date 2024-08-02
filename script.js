@@ -107,9 +107,12 @@ document.getElementById("themeChange").addEventListener("click", function() {
 
 function toggleStylesheet(href, onoff) {
   var existingNode = null;
+  var existingIndex = -1;
+
   for (var i = 0; i < document.styleSheets.length; i++) {
     if (document.styleSheets[i].href && document.styleSheets[i].href.indexOf(href) > -1) {
       existingNode = document.styleSheets[i].ownerNode;
+      existingIndex = i;
       break;
     }
   }
@@ -117,17 +120,20 @@ function toggleStylesheet(href, onoff) {
   if (onoff == undefined) onoff = !existingNode;
 
   if (onoff) {
-    if (existingNode) return onoff; 
+    if (existingNode) return onoff;
     darkmode = true;
     var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    // Append a unique query string to prevent caching
-    link.href = href + "?t=" + new Date().getTime();
+    link.href = href + "?t=" + new Date().getTime(); // Append timestamp to ensure no caching
+    console.log("Loading stylesheet: " + link.href);
     document.getElementsByTagName('head')[0].appendChild(link);
   } else {
     if (existingNode) {
+      console.log("Removing stylesheet: " + existingNode.href);
       existingNode.parentNode.removeChild(existingNode);
+      // Force the browser to recognize the removal
+      document.styleSheets[existingIndex].disabled = true;
     }
     darkmode = false;
   }
