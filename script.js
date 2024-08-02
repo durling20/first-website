@@ -106,25 +106,30 @@ document.getElementById("themeChange").addEventListener("click", function() {
 })
 
 function toggleStylesheet(href, onoff) {
-  var existingNode = 0;
+  var existingNode = null;
   for (var i = 0; i < document.styleSheets.length; i++) {
-    if (document.styleSheets[i].href && document.styleSheets[i].href.indexOf(href) > -1) existingNode = document.styleSheets[i].ownerNode;
+    if (document.styleSheets[i].href && document.styleSheets[i].href.indexOf(href) > -1) {
+      existingNode = document.styleSheets[i].ownerNode;
+      break;
+    }
   }
+
   if (onoff == undefined) onoff = !existingNode;
-  if (onoff) { 
+
+  if (onoff) {
     if (existingNode) return onoff; 
     darkmode = true;
     var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    // Append a timestamp to force the browser to load a fresh version
-    link.href = href + "?t=" + new Date().getTime();
+    link.href = href + "?t=" + new Date().getTime(); // Append timestamp to ensure no caching
     document.getElementsByTagName('head')[0].appendChild(link);
-  } else { 
-    if (existingNode) existingNode.parentNode.removeChild(existingNode);
+  } else {
+    if (existingNode) {
+      existingNode.parentNode.removeChild(existingNode);
+    }
     darkmode = false;
   }
+
   return onoff;
 }
-
-
