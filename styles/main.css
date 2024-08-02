@@ -215,7 +215,7 @@ i {
 }
 
 
-@media screen and (max-width: 599px) {
+@media all and (max-width: 599px) {
     body {
         grid-template-areas:
             "header header"
