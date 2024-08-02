@@ -122,7 +122,8 @@ function toggleStylesheet(href, onoff) {
     var link = document.createElement('link');
     link.rel = 'stylesheet';
     link.type = 'text/css';
-    link.href = href + "?t=" + new Date().getTime(); // Append timestamp to ensure no caching
+    // Append a unique query string to prevent caching
+    link.href = href + "?t=" + new Date().getTime();
     document.getElementsByTagName('head')[0].appendChild(link);
   } else {
     if (existingNode) {
