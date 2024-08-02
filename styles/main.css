@@ -88,6 +88,7 @@ article {
 }
 
 aside {
+    grid-area: aside; 
     padding: 10px;
 }
 
@@ -211,4 +212,34 @@ iframe{
 }
 i {
     color: rgb(92, 0, 128);
+}
+
+
+@media screen and (max-width: 599px) {
+    body {
+        grid-template-areas:
+            "header header"
+            "aside aside"
+            "main main"
+            "footer footer";
+    }
+
+    aside {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        text-align: center;
+        width: 100%; /* Ensure 'aside' takes full width */
+        margin: 0; /* Remove margins */
+        padding: 10px; /* Adjust padding if necessary */
+        box-sizing: border-box; /* Include padding and border in element's total width */
+    }
+
+    nav {
+        margin-right: 0; /* Ensure no margin on the right */
+        width: 20vw;
+        text-align: center;
+        border-right: black;
+    }
 }
