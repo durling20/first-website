@@ -39,7 +39,7 @@ header {
 .logo {
     width: 100px;
     height: 100px;
-    margin-right: 10px;
+    margin-right:3%;
 }
 
 nav {
@@ -98,6 +98,7 @@ figure {
     padding: 10px;
     margin-bottom: 10px;
     height: min-content;
+    width: min-content;
 }
 
 figcaption {
@@ -105,7 +106,7 @@ figcaption {
     border: 1px solid #000;
     padding: 5px;
     text-align: center;
-    width:138px;
+    max-width: 138px;
 }
 
 details {
@@ -124,7 +125,7 @@ summary {
     display: grid;
 }
 
-.home, .biden, .trump {
+.home, .biden, .trump , .log{
     grid-row: 1;
     grid-column: 1;
     padding: 10px;
@@ -138,8 +139,12 @@ summary {
     display: flex;
 }
 
-.biden, .trump{
+.biden, .trump,.log{
     display: none;
+}
+
+.log{
+    min-height: 400px;
 }
 
 .modal {
@@ -192,7 +197,7 @@ summary {
 
 #vote {
     text-align: center;
-    font-size: 25px;
+    font-size: large;
     font-weight: bold;
     margin: auto;
     width: 50vw;
@@ -214,6 +219,94 @@ i {
     color: rgb(92, 0, 128);
 }
 
+.flex {
+    list-style-type: none;
+    padding: 0;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+  
+  .flex li {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-align: left;
+        -ms-flex-align: left;
+            align-items: left;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
+
+ .check{
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+input, textarea {
+    display: block;
+    margin-bottom: 0.5em; 
+    width: 100%; 
+}
+
+.errorMsg {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 0.5em; 
+    display: none; 
+}
+
+.flex {
+    list-style-type: none;
+    padding: 0;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.flex li {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px; 
+}
+
+.flex li > label {
+    margin-bottom: 0.2em;
+    font-weight: bold;
+    align-self: left;
+}
+
+.flex li input, 
+.flex li textarea {
+    padding: 15px;
+}
+
+.flex button {
+    margin: auto;
+    padding: 22px 46px;
+    font: normal 22px/1.5;
+    border: none;
+    background: #0b5d72;
+    color: #f2f2f2;
+    text-transform: uppercase;
+    letter-spacing: .09em;
+    border-radius: 4px;
+}
+
+.flex > li {
+    margin-bottom: 20px; 
+}
+
+
+input.was-validated:invalid {
+    color: red;
+    border: 1px solid red;
+}
+
+input.was-validated:invalid ~ .errorMsg {
+    display: block; 
+}
 
 @media all and (max-width: 700px) {
     body {
@@ -222,24 +315,35 @@ i {
             "aside aside"
             "main main"
             "footer footer";
+        grid-template-rows: auto 1fr 1fr auto;
+        grid-template-columns: 1fr 1fr;
     }
 
     aside {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content:space-between;
         align-items: center;
         text-align: center;
-        width: 100%; /* Ensure 'aside' takes full width */
-        margin: 0; /* Remove margins */
-        padding: 10px; /* Adjust padding if necessary */
-        box-sizing: border-box; /* Include padding and border in element's total width */
+        width: 100%;
+        margin: 0;
+        padding: 10px; 
+        box-sizing: border-box; 
     }
 
     nav {
-        margin-right: 0; /* Ensure no margin on the right */
+        font-size: 3.2vw;
+        margin-right: 0; 
+        margin-left: 0;
         width: 20vw;
         text-align: center;
         border-right: black;
+    }
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    article {
+        flex-direction: column;
     }
 }
