@@ -23,6 +23,7 @@
                     <span class="close">&times;</span>
                     <div id="contact">Email: 11012760@uvu.edu</div>
                 </div>
+                <nav id="l_button"><a href="#" id="log">Log Visit</a></nav>
                 <script src="js/main.js"></script>
         </aside>
         <main>
@@ -46,7 +47,7 @@
                             from. 
                         </p>
                     </div>
-                    </article>
+                </article>
             </section>
             <section class="biden" id="two">
                 <h2>Biden</h2>
@@ -93,11 +94,89 @@
                 <iframe src="https://www.youtube.com/embed/AcpjvVFAayo?si=t0dA0QN1I6NeDnxm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen>
                 </iframe>
             </section>
+            <section class="log" id="four">
+                <h2>Log Your Visit</h2>
+                <div id="success" class="successMsg" style="display:none">
+                    Thank you for logging your visit!
+                  </div>
+                  <form id="myform" novalidate method="GET" action="https://wp.zybooks.com/form-viewer.php">
+                    <ul class="flex">
+                      <li class="section-display">
+                        <label for="first-name">First Name</label>
+                        <input type="text" id="first-name" name="first-name" placeholder="Enter your first name here">
+                        <div class="errorMsg"></div>
+                      </li>
+                      <li>
+                        <label for="last-name">Last Name</label>
+                        <input type="text"  id="last-name" name="last-name" placeholder="Enter your last name here">
+                        <div class="errorMsg"></div>
+                      </li>
+                      <li >
+                        <label for="address">Address</label>
+                        <input type="text"  id="address" name="address" placeholder="Enter your address here">
+                        <div class="errorMsg"></div>
+                      </li>
+                      <li >
+                        <label for="city">City</label>
+                        <input type="text"  id="city" name="city" placeholder="Enter your city here">
+                        <div class="errorMsg"></div>
+                      </li>
+                      <li >
+                        <label for="state">State</label>
+                        <input type="text"  id="state" name="state" placeholder="Enter your state here">
+                        <div class="errorMsg"></div>
+                      </li>
+                      <li >
+                        <label for="zip">Zip</label>
+                        <input type="text"  id="zip" name="zip" placeholder="Enter your zip code here">
+                        <div class="errorMsg"></div>
+                      </li>
+                      <li >
+                        <label for="email">Email</label>
+                        <input type="text" id="email" name="email" placeholder="Enter your email here">
+                        <div class="errorMsg"></div>
+                      </li>
+                      <li>
+                        <label for="phone">Phone</label>
+                        <input type="text" id="phone" placeholder="Enter your phone here">
+                        <div class="errorMsg"></div>
+                      </li>
+                      <li>
+                        <h2>How did you find my page?</h2>
+                      </li>
+                      <li class="check">
+                        <input type="checkbox" id='google' name='find-page' value="google">
+                        <label for="google">Google Search</label>
+                      </li>
+                      <li class="check">
+                        <input type="checkbox" id='friend' name='find-page' value="friend">
+                        <label for="friend">Friend</label>
+                      </li>
+                      <li class="check">
+                        <input type="checkbox" id='newspaper' name='find-page' value="newspaper">
+                        
+                        <label for="newspaper">News Paper</label><br>
+                        <div class="errorMsg"></div>
+                      </li>
+                      
+                      <li>
+                        <label for="comment">Comments</label>
+                        <textarea rows="4" id="comment" placeholder="Enter your comments here"></textarea>
+                      </li>
+                      
+                      <li>
+                        <button type="submit">Send</button>
+                      </li>
+                    </ul>
+                  </form>
+                  </div>
+            </section>
             </section>
             <details>
                 <summary>What about 3rd parties?</summary>
                 <p>They can't win. Check out this <a href="https://www.washingtonpost.com/politics/2023/03/06/trump-third-party-chances/">article</a> by the Washington Post.</p>
             </details>
+            <script defer src="js/validation.js"></script>
             <script src="js/main.js"></script>
         </main>
         <footer>
