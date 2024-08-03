@@ -252,7 +252,7 @@ input, textarea {
 }
 
 .errorMsg {
-    color: red;
+    color: rgb(238, 158, 66);
     font-size: 0.9em;
     margin-top: 0.5em; 
     display: none; 
