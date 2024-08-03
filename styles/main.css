@@ -329,6 +329,7 @@ input.was-validated:invalid ~ .errorMsg {
         margin: 0;
         padding: 10px; 
         box-sizing: border-box; 
+        height: fit-content;
     }
 
     nav {
