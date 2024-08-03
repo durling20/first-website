@@ -31,7 +31,7 @@ header {
         white 160px);
     display: flex;
     align-items: center;
-    font-size: 30pt;
+    font-size: xx-large;
     color: #ce191d;
     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
 }
@@ -192,16 +192,16 @@ summary {
 
 #vote {
     text-align: center;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
     margin: auto;
-    width: 500px;
+    width: 50vw;
     border-right-color: black;
     display:block;
 }
 iframe{
-    width: 560px;; 
-    height:315px;
+    width: 40vw; 
+    height:auto;
     margin:auto;
 }
 
@@ -215,7 +215,7 @@ i {
 }
 
 
-@media all and (max-width: 1000px) {
+@media all and (max-width: 700px) {
     body {
         grid-template-areas:
             "header header"
