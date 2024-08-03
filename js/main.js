@@ -7,14 +7,17 @@ var img = document.getElementById("myImg");
 var biden = document.getElementById("biden")
 var trump = document.getElementById("trump")
 var home = document.getElementById("home")
+var log = document.getElementById("log")
 
 var h_section = document.getElementById("one")
 var t_section = document.getElementById("three")
 var b_section = document.getElementById("two")
+var l_section = document.getElementById("four")
 
 var b_button = document.getElementById("b_button")
 var t_button = document.getElementById("t_button")
 var h_button = document.getElementById("h_button")
+var l_button = document.getElementById("l_button")
 
 var span = document.getElementsByClassName("close")[0];
 
@@ -26,6 +29,10 @@ img.onclick = function(){
   captionText.innerHTML = this.alt;
 }
 
+document.addEventListener("DOMContentLoaded", function() {
+  initValidation("myform","success");
+});
+
 // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
@@ -36,23 +43,28 @@ span.onclick = function() {
 
 biden.onclick = function(){
   h_section.style.display = "none";
-  h_button.style.position = "static"
+  h_button.style.position = "static";
 
   b_section.style.display = "flex";
-  b_button.style.position = "relative"
+  b_button.style.position = "relative";
 
   t_section.style.display = "none";
-  t_button.style.position = "static"
+  t_button.style.position = "static";
+
+  l_section.style.display = "none";
+  l_button.style.position = "static";
 
   if (darkmode === true){
     h_button.style.backgroundColor = "#720002"
     t_button.style.backgroundColor = "#720002"
     b_button.style.backgroundColor = "#b40003"
+    l_button.style.backgroundColor = "#720002"
   }
   else {
     h_button.style.backgroundColor = "#ce191d"
     b_button.style.backgroundColor = "#db6567"
     t_button.style.backgroundColor = "#ce191d"
+    l_button.style.backgroundColor = "#ce191d"
   }
 }
 
@@ -65,16 +77,21 @@ trump.onclick = function(){
 
   b_section.style.display = "none";
   b_button.style.position = "static"
+
+  l_section.style.display = "none";
+  l_button.style.position = "static";
   
   if (darkmode === true){
     h_button.style.backgroundColor = "#720002"
     t_button.style.backgroundColor = "#b40003"
+    b_button.style.backgroundColor = "#720002"
     b_button.style.backgroundColor = "#720002"
   }
   else {
     h_button.style.backgroundColor = "#ce191d"
     t_button.style.backgroundColor = "#db6567"
     b_button.style.backgroundColor = "#ce191d"
+    l_button.style.backgroundColor = "#ce191d"
   }
 }
 
@@ -87,16 +104,49 @@ home.onclick = function(){
 
   t_section.style.display = "none";
   t_button.style.position = "static"
+
+  l_section.style.display = "none";
+  l_button.style.position = "static";
   
   if (darkmode === true){
     h_button.style.backgroundColor = "#b40003"
     t_button.style.backgroundColor = "#720002"
     b_button.style.backgroundColor = "#720002"
+    l_button.style.backgroundColor = "#720002"
   }
   else {
     b_button.style.backgroundColor = "#ce191d"
     h_button.style.backgroundColor = "#db6567"
     t_button.style.backgroundColor = "#ce191d"
+    l_button.style.backgroundColor = "#ce191d"
+  }
+
+}
+
+log.onclick = function(){
+  b_section.style.display = "none";
+  b_button.style.position = "static"
+
+  l_section.style.display = "flex";
+  l_button.style.position = "relative"
+
+  t_section.style.display = "none";
+  t_button.style.position = "static"
+
+  h_section.style.display = "none";
+  h_button.style.position = "static";
+  
+  if (darkmode === true){
+    l_button.style.backgroundColor = "#b40003"
+    t_button.style.backgroundColor = "#720002"
+    b_button.style.backgroundColor = "#720002"
+    h_button.style.backgroundColor = "#720002"
+  }
+  else {
+    b_button.style.backgroundColor = "#ce191d"
+    l_button.style.backgroundColor = "#db6567"
+    t_button.style.backgroundColor = "#ce191d"
+    h_button.style.backgroundColor = "#ce191d"
   }
 
 }
